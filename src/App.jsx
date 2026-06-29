@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Mapa from './pages/Mapa';
 import Rutas from './pages/Rutas';
 import Vehiculos from './pages/Vehiculos';
+import Incidentes from './pages/Incidentes';
 import authService from './services/authService';
 
 function ProtectedRoute({ children }) {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/rutas" element={<ProtectedRoute><Rutas /></ProtectedRoute>} />
         <Route path="/vehiculos" element={<ProtectedRoute><Vehiculos /></ProtectedRoute>} />
+        <Route path="/incidentes" element={<ProtectedRoute><Incidentes /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   );

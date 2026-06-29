@@ -1,0 +1,203 @@
+.incidentes-container {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.incidentes-header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.incidentes-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.incidentes-logo {
+  font-size: 22px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1E5EFF 0%, #19C37D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+}
+
+.incidentes-breadcrumb {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+}
+
+.incidentes-main {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.incidentes-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.incidentes-titulo h1 {
+  margin-bottom: 4px;
+}
+
+.incidentes-filtros {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.incidentes-filtros select {
+  flex: 1;
+  max-width: 240px;
+  cursor: pointer;
+}
+
+.incidentes-loading,
+.incidentes-error {
+  padding: 40px;
+  text-align: center;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+}
+
+.incidentes-error {
+  background-color: rgba(255, 59, 48, 0.1);
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+}
+
+.incidentes-tabla-wrapper {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.incidentes-tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.incidentes-tabla thead {
+  background-color: var(--color-bg);
+}
+
+.incidentes-tabla th {
+  text-align: left;
+  padding: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.incidentes-tabla td {
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.incidentes-tabla tr:last-child td {
+  border-bottom: none;
+}
+
+.incidentes-tabla tbody tr:hover {
+  background-color: rgba(30, 94, 255, 0.05);
+}
+
+.incidentes-tipo {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.incidentes-descripcion {
+  color: var(--color-text-secondary);
+  max-width: 300px;
+  font-size: 14px;
+}
+
+.incidentes-fecha {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-verde {
+  background-color: rgba(25, 195, 125, 0.15);
+  color: var(--color-success);
+  border: 1px solid var(--color-success);
+}
+
+.badge-amarillo {
+  background-color: rgba(255, 176, 32, 0.15);
+  color: var(--color-warning);
+  border: 1px solid var(--color-warning);
+}
+
+.badge-amarillo-claro {
+  background-color: rgba(255, 176, 32, 0.1);
+  color: var(--color-warning);
+  border: 1px solid rgba(255, 176, 32, 0.5);
+}
+
+.badge-rojo {
+  background-color: rgba(255, 59, 48, 0.15);
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+}
+
+.badge-azul {
+  background-color: rgba(30, 94, 255, 0.15);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.badge-gris {
+  background-color: rgba(163, 170, 184, 0.15);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.incidentes-tabla-vacio {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-secondary);
+}
+
+.incidentes-paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.incidentes-paginacion span {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
