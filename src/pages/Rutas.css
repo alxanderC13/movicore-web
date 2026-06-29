@@ -1,0 +1,163 @@
+.rutas-container {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.rutas-header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rutas-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rutas-logo {
+  font-size: 22px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1E5EFF 0%, #19C37D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+}
+
+.rutas-breadcrumb {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+}
+
+.rutas-main {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rutas-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.rutas-titulo h1 {
+  margin-bottom: 4px;
+}
+
+.rutas-busqueda {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.rutas-busqueda input {
+  flex: 1;
+}
+
+.rutas-loading,
+.rutas-error {
+  padding: 40px;
+  text-align: center;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+}
+
+.rutas-error {
+  background-color: rgba(255, 59, 48, 0.1);
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+}
+
+.rutas-tabla-wrapper {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.rutas-tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rutas-tabla thead {
+  background-color: var(--color-bg);
+}
+
+.rutas-tabla th {
+  text-align: left;
+  padding: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rutas-tabla td {
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rutas-tabla tr:last-child td {
+  border-bottom: none;
+}
+
+.rutas-tabla tbody tr:hover {
+  background-color: rgba(30, 94, 255, 0.05);
+}
+
+.rutas-codigo {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.rutas-nombre {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.rutas-descripcion {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.rutas-vacio {
+  color: var(--color-border);
+}
+
+.rutas-accion {
+  color: var(--color-success);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.rutas-tabla-vacio {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-secondary);
+}
+
+.rutas-paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.rutas-paginacion span {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
