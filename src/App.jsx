@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import Mapa from './pages/Mapa';
 import authService from './services/authService';
 
 // Componente que protege las rutas (solo entra si estás logueado)
@@ -36,10 +37,12 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* Mapa es público (sin login) - usa endpoints /api/public/ */}
+        <Route path="/mapa" element={<Mapa />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-

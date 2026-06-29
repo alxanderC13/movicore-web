@@ -1,0 +1,98 @@
+.mapa-container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.mapa-sidebar {
+  width: 340px;
+  background-color: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  padding: var(--space-lg);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.mapa-sidebar h2 {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-primary);
+}
+
+.mapa-sidebar-subtitle {
+  font-size: 13px;
+  margin-bottom: var(--space-lg);
+}
+
+.mapa-loading {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.mapa-error {
+  background-color: rgba(255, 59, 48, 0.1);
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  margin-bottom: var(--space-md);
+}
+
+.mapa-rutas-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.mapa-ruta-item {
+  padding: var(--space-md);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mapa-ruta-item:hover {
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+.mapa-ruta-item.activa {
+  background-color: rgba(30, 94, 255, 0.1);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-blue);
+}
+
+.mapa-ruta-codigo {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.mapa-ruta-nombre {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.mapa-ruta-descripcion {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.mapa-vista {
+  flex: 1;
+  position: relative;
+}
+
+/* Asegurar que Leaflet renderice bien dentro del layout */
+.leaflet-container {
+  background-color: #1a2332 !important;
+}
