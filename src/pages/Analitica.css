@@ -1,0 +1,262 @@
+.analitica-container {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.analitica-header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.analitica-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.analitica-logo {
+  font-size: 22px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1E5EFF 0%, #19C37D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+}
+
+.analitica-breadcrumb {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+}
+
+.analitica-main {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.analitica-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.analitica-titulo h1 {
+  margin-bottom: 4px;
+}
+
+.analitica-loading,
+.analitica-error {
+  padding: 40px;
+  text-align: center;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+}
+
+.analitica-error {
+  background-color: rgba(255, 59, 48, 0.1);
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+}
+
+.analitica-seccion {
+  margin-bottom: 40px;
+}
+
+.analitica-seccion-titulo {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+/* KPIs grandes */
+.analitica-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.kpi-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+}
+
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.kpi-azul::before { background-color: var(--color-primary); }
+.kpi-verde::before { background-color: var(--color-success); }
+.kpi-amarillo::before { background-color: var(--color-warning); }
+.kpi-rojo::before { background-color: var(--color-danger); }
+
+.kpi-icono {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.kpi-valor {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+}
+
+.kpi-titulo {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.kpi-desc {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+/* Métricas pequeñas */
+.analitica-metricas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.metrica-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition: border-color 0.2s ease;
+}
+
+.metrica-card:hover {
+  border-color: var(--color-primary);
+}
+
+.metrica-icono {
+  font-size: 28px;
+}
+
+.metrica-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.metrica-valor {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+}
+
+.metrica-titulo {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+/* Estado del sistema */
+.analitica-estado {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.estado-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+.estado-valor {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--color-success);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.estado-led {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.estado-led-verde {
+  background-color: var(--color-success);
+  box-shadow: 0 0 8px var(--color-success);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Accesos rápidos */
+.analitica-accesos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.acceso-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.acceso-card:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(30, 94, 255, 0.05);
+  transform: translateX(4px);
+  text-decoration: none;
+}
+
+.acceso-icono {
+  font-size: 24px;
+}
+
